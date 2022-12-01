@@ -1,7 +1,9 @@
 <template>
   <div class="intro_wrap">
-    <Button :Text="login" @click="onClick" />
-    <Button :Text="signUp" @click="onClick" />
+    <div class="button_div">
+      <Button :Text="login" />
+      <Button :Text="signUp" />
+    </div>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ export default {
   data() {
     return {
       login: "Login",
-      signUp: "Sign Up",
+      signUp: "Sign",
     };
   },
   methods: {
@@ -26,10 +28,26 @@ export default {
 </script>
 
 <style lang="scss">
+$mainColor: #a490cd;
+$subColor: #d2cdf6;
+$thirdColor: #c59fce;
+$textColor: #fff;
+
 .intro_wrap {
   max-width: 500px;
   height: 100vh;
   margin: auto;
+  background: linear-gradient(45deg, $mainColor, $thirdColor);
   display: flex;
+  align-items: center;
+}
+
+.button_div {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>
