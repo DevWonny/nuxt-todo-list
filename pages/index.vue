@@ -34,10 +34,7 @@ $thirdColor: #c59fce;
 $textColor: #fff;
 
 .intro_wrap {
-  max-width: 500px;
-  height: 100vh;
-  margin: auto;
-  background: linear-gradient(45deg, $mainColor, $thirdColor);
+  height: 100%;
   display: flex;
   align-items: center;
 }
