@@ -2,8 +2,8 @@
   <div class="login_wrap">
     <h1 class="title">Login</h1>
     <div class="input_div">
-      <UserInput></UserInput>
-      <UserInput></UserInput>
+      <UserInput v-model="id" :placeholder="placeId"></UserInput>
+      <UserInput v-model="password" :placeholder="placePw"></UserInput>
     </div>
   </div>
 </template>
@@ -14,11 +14,28 @@ export default {
   components: {
     UserInput,
   },
+  data() {
+    return {
+      id: "",
+      password: "",
+      placeId: "ID",
+      placePw: "Password",
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .login_wrap {
   height: 100%;
+
+  .input_div {
+    width: 90%;
+    height: 180px;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 </style>

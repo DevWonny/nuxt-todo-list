@@ -1,14 +1,35 @@
 <template>
-  <div class="input_warp">
-    <input type="text" />
+  <div>
+    <input
+      type="text"
+      :value="value"
+      @input="onChange"
+      :placeholder="placeholder"
+    />
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    value: String,
+    placeholder: String,
+  },
+  methods: {
+    onChange(e) {
+      this.$emit("input", e.target.value);
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
-.input_wrap {
-  width: 80%;
-  height: 40px;
+input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 20px;
 }
 </style>
