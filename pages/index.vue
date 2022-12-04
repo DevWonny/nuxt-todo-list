@@ -1,17 +1,17 @@
 <template>
   <div class="intro_wrap">
     <div class="button_div">
-      <Button :Text="login" />
-      <Button :Text="signUp" />
+      <LinkButton :Text="login" />
+      <LinkButton :Text="signUp" />
     </div>
   </div>
 </template>
 
 <script>
-import Button from "../components/Button.vue";
+import LinkButton from "../components/LinkButton.vue";
 export default {
   components: {
-    Button,
+    LinkButton,
   },
   data() {
     return {
