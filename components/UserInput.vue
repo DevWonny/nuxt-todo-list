@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <input
-      type="text"
-      :value="value"
-      @input="onChange"
-      :placeholder="placeholder"
-    />
-  </div>
+  <input
+    type="text"
+    :value="value"
+    @input="onChange"
+    :placeholder="placeholder"
+  />
 </template>
 
 <script>

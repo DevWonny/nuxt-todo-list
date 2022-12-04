@@ -1,6 +1,6 @@
 <template>
   <div class="login_wrap">
-    <div><BackButton /></div>
+    <BackButton />
     <h1 class="title">Login</h1>
     <div class="input_div">
       <UserInput v-model="id" :placeholder="placeId"></UserInput>
@@ -14,8 +14,8 @@
     ></ConfirmButton>
 
     <div class="sign_button">
-      <NuxtLink to="/Sign" class="link-text">
-        <span>회원가입</span>
+      <NuxtLink to="/Sign" class="link_text">
+        <span>Sign Up</span>
       </NuxtLink>
     </div>
   </div>
@@ -73,7 +73,7 @@ $textColor: #fff;
     justify-content: space-between;
   }
 
-  .link-text {
+  .link_text {
     text-decoration: none;
   }
   .sign_button {
