@@ -19,11 +19,6 @@ export default {
       signUp: "Sign",
     };
   },
-  methods: {
-    onClick(item) {
-      console.log(`${item} 페이지로 이동!`);
-    },
-  },
 };
 </script>
 
