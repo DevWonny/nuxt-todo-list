@@ -1,25 +1,17 @@
 <template>
   <div class="intro_wrap">
     <div class="button_div">
-      <LinkButton :Text="login" />
-      <LinkButton :Text="signUp" />
+      <link-button :Text="login" />
+      <link-button :Text="signUp" />
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import LinkButton from "../components/LinkButton.vue";
-export default {
-  components: {
-    LinkButton,
-  },
-  data() {
-    return {
-      login: "Login",
-      signUp: "Sign",
-    };
-  },
-};
+
+const login = "Login";
+const signUp = "Sign";
 </script>
 
 <style lang="scss">

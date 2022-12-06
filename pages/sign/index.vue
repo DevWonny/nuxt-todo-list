@@ -1,17 +1,17 @@
 <template>
   <div class="sign_wrap">
-    <BackButton />
+    <back-button />
 
     <h1 class="title">Sign Up</h1>
 
     <div class="input_wrap">
-      <UserInput v-model="id" :placeholder="placeId" />
-      <UserInput v-model="password" :placeholder="placePw" />
-      <UserInput v-model="passwordCheck" :placeholder="placePwCheck" />
-      <UserInput v-model="nickName" :placeholder="placeNickName" />
+      <user-input v-model="id" :placeholder="placeId" />
+      <user-input v-model="password" :placeholder="placePw" />
+      <user-input v-model="passwordCheck" :placeholder="placePwCheck" />
+      <user-input v-model="nickName" :placeholder="placeNickName" />
     </div>
 
-    <ConfirmButton :button-text="confirm" :id="id" :pw="password" />
+    <confirm-button :button-text="confirm" :id="id" :pw="password" />
 
     <div class="login_button">
       <NuxtLink to="/Login" class="link_login">
@@ -21,32 +21,22 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import BackButton from "../../components/BackButton.vue";
 import ConfirmButton from "../../components/ConfirmButton.vue";
 import UserInput from "../../components/UserInput.vue";
 
-export default {
-  components: {
-    BackButton,
-    ConfirmButton,
-    UserInput,
-  },
+import { ref } from "vue";
 
-  data() {
-    return {
-      confirm: "Sign Up",
-      id: "",
-      password: "",
-      passwordCheck: "",
-      nickName: "",
-      placeId: "ID",
-      placePw: "Password",
-      placePwCheck: "Password Check",
-      placeNickName: "NickName",
-    };
-  },
-};
+const confirm = ref("Sign Up");
+const id = ref("");
+const password = ref("");
+const passwordCheck = ref("");
+const nickName = ref("");
+const placeId = ref("ID");
+const placePw = ref("Password");
+const placePwCheck = ref("Password Check");
+const placeNickName = ref("NickName");
 </script>
 
 <style lang="scss" scoped>
