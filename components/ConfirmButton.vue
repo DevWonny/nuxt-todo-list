@@ -4,13 +4,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["buttonText", "id", "pw"],
-  methods: {
-    // button 클릭시 event
-  },
-};
+<script setup>
+const props = defineProps(["buttonText", "id", "pw"]);
+
+// method -> 클릭 이벤트 필요
 </script>
 
 <style lang="scss" scoped>
