@@ -1,17 +1,17 @@
 <template>
   <div class="login_wrap">
-    <BackButton />
+    <back-button />
     <h1 class="title">Login</h1>
     <div class="input_div">
-      <UserInput v-model="id" :placeholder="placeId"></UserInput>
-      <UserInput v-model="password" :placeholder="placePw"></UserInput>
+      <user-input v-model="id" :placeholder="placeId"></user-input>
+      <user-input v-model="password" :placeholder="placePw"></user-input>
     </div>
 
-    <ConfirmButton
+    <confirm-button
       :button-text="confirm"
       :id="id"
       :pw="password"
-    ></ConfirmButton>
+    ></confirm-button>
 
     <div class="sign_button">
       <NuxtLink to="/Sign" class="link_text">
@@ -21,27 +21,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import UserInput from "~/components/UserInput.vue";
 import ConfirmButton from "../../components/ConfirmButton.vue";
 import BackButton from "../../components/BackButton.vue";
 
-export default {
-  components: {
-    UserInput,
-    ConfirmButton,
-    BackButton,
-  },
-  data() {
-    return {
-      id: "",
-      password: "",
-      placeId: "ID",
-      placePw: "Password",
-      confirm: "Login",
-    };
-  },
-};
+import { ref } from "vue";
+
+const id = ref("");
+const password = ref("");
+const placeId = ref("ID");
+const placePw = ref("Password");
+const confirm = ref("Login");
 </script>
 
 <style lang="scss" scoped>
