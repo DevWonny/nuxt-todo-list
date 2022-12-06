@@ -7,17 +7,13 @@
   />
 </template>
 
-<script>
-export default {
-  props: {
-    value: String,
-    placeholder: String,
-  },
-  methods: {
-    onChange(e) {
-      this.$emit("input", e.target.value);
-    },
-  },
+<script setup>
+const props = defineProps(["value", "placeholder"]);
+
+const emit = defineEmits("input");
+
+const onChange = (e) => {
+  emit("input", e.target.value);
 };
 </script>
 
