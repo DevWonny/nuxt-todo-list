@@ -4,12 +4,8 @@
   </NuxtLink>
 </template>
 
-<script>
-export default {
-  props: {
-    Text: String,
-  },
-};
+<script setup>
+const props = defineProps(["Text"]);
 </script>
 
 <style lang="scss" scoped>
