@@ -2,18 +2,9 @@
   <div class="back_button" @click="onBack"></div>
 </template>
 
-<script>
-import BackIcon from "../assets/icon/Back_icon.svg";
-
-export default {
-  components: {
-    BackIcon,
-  },
-  methods: {
-    onBack() {
-      window.history.go(-1);
-    },
-  },
+<script setup>
+const onBack = () => {
+  window.history.go(-1);
 };
 </script>
 
